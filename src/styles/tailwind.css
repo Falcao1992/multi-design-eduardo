@@ -1,3 +1,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    :root {
+        /* color text */
+        --color-text-base: 255, 255, 255; /* color text de base */
+        --color-text-secondary: 167, 162, 198; /* color text secondary */
+
+        /* Background Color */
+        --color-fill: 75, 75, 98; /* bg color de base */
+        --color-fill-header: 42, 42, 60; /* bg color de base header */
+        --color-fill-header-light: 193, 193, 193; /* bg color light de base header */
+        --color-fill-footer: 42, 42, 60; /* bg color de base footer */
+
+        /* Background Color Btn */
+        --color-hover-button: 75, 75, 98; /* bg color hover button */
+        --color-fill-active-item: 36, 36, 51; /* bg color hover button */
+
+    }
+}
+
+@layer components {
+    .btn {
+        @apply px-3 py-2 text-sm font-medium capitalize rounded-md transition duration-500 ease-in-out hover:bg-skin-btn-hover !important;
+    }
+    .btn-active {
+        @apply bg-skin-active-item hover:bg-skin-active-item transition duration-500 ease-in-out !important;
+    }
+}

@@ -545,14 +545,159 @@ video {
 	--tw-ring-offset-shadow: 0 0 #0000;
 	--tw-ring-shadow: 0 0 #0000;
 }
-.m-\[3px\] {
-	margin: 3px;
+    :root {
+        /* color text */
+        --color-text-base: 255, 255, 255; /* color text de base */
+        --color-text-secondary: 167, 162, 198; /* color text secondary */
+
+        /* Background Color */
+        --color-fill: 75, 75, 98; /* bg color de base */
+        --color-fill-header: 42, 42, 60; /* bg color de base header */
+        --color-fill-header-light: 193, 193, 193; /* bg color light de base header */
+        --color-fill-footer: 42, 42, 60; /* bg color de base footer */
+
+        /* Background Color Btn */
+        --color-hover-button: 75, 75, 98; /* bg color hover button */
+        --color-fill-active-item: 36, 36, 51; /* bg color hover button */
+
+    }
+.btn {
+	border-radius: 0.375rem !important;
+	padding-left: 0.75rem !important;
+	padding-right: 0.75rem !important;
+	padding-top: 0.5rem !important;
+	padding-bottom: 0.5rem !important;
+	font-size: 0.875rem !important;
+	line-height: 1.25rem !important;
+	font-weight: 500 !important;
+	text-transform: capitalize !important;
+	transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter !important;
+	transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter !important;
+	transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter !important;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
+	transition-duration: 150ms !important;
+	transition-duration: 500ms !important;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+.btn:hover {
+	--tw-bg-opacity: 1 !important;
+	background-color: rgba(var(--color-hover-button)) !important;
+}
+.btn-active {
+	--tw-bg-opacity: 1 !important;
+	background-color: rgba(var(--color-fill-active-item)) !important;
+	transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter !important;
+	transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter !important;
+	transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter !important;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
+	transition-duration: 150ms !important;
+	transition-duration: 500ms !important;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+.btn-active:hover {
+	--tw-bg-opacity: 1 !important;
+	background-color: rgba(var(--color-fill-active-item)) !important;
+}
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border-width: 0;
+}
+.fixed {
+	position: fixed;
+}
+.relative {
+	position: relative;
+}
+.absolute {
+	position: absolute;
+}
+.inset-y-0 {
+	top: 0px;
+	bottom: 0px;
+}
+.top-0 {
+	top: 0px;
+}
+.left-4 {
+	left: 1rem;
+}
+.z-50 {
+	z-index: 50;
+}
+.z-30 {
+	z-index: 30;
+}
+.z-40 {
+	z-index: 40;
+}
+.mx-auto {
+	margin-left: auto;
+	margin-right: auto;
+}
+.mr-4 {
+	margin-right: 1rem;
 }
 .flex {
 	display: flex;
 }
-.h-\[100vh\] {
-	height: 100vh;
+.inline-flex {
+	display: inline-flex;
+}
+.block {
+	display: block;
+}
+.hidden {
+	display: none;
+}
+.h-20 {
+	height: 5rem;
+}
+.h-16 {
+	height: 4rem;
+}
+.h-6 {
+	height: 1.5rem;
+}
+.min-h-\[80px\] {
+	min-height: 80px;
+}
+.w-full {
+	width: 100%;
+}
+.w-6 {
+	width: 1.5rem;
+}
+.w-max {
+	width: max-content;
+}
+.max-w-7xl {
+	max-width: 80rem;
+}
+.flex-1 {
+	flex: 1 1 0%;
+}
+.transform {
+	--tw-translate-x: 0;
+	--tw-translate-y: 0;
+	--tw-rotate: 0;
+	--tw-skew-x: 0;
+	--tw-skew-y: 0;
+	--tw-scale-x: 1;
+	--tw-scale-y: 1;
+	transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.translate-y-0 {
+	--tw-translate-y: 0px;
+}
+.-translate-y-full {
+	--tw-translate-y: -100%;
 }
 .flex-col {
 	flex-direction: column;
@@ -560,32 +705,170 @@ video {
 .items-center {
 	align-items: center;
 }
+.justify-between {
+	justify-content: space-between;
+}
 .justify-center {
 	justify-content: center;
 }
-.bg-\[\#eee\] {
+.space-x-4 > :not([hidden]) ~ :not([hidden]) {
+	--tw-space-x-reverse: 0;
+	margin-right: calc(1rem * var(--tw-space-x-reverse));
+	margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
+}
+.space-y-1 > :not([hidden]) ~ :not([hidden]) {
+	--tw-space-y-reverse: 0;
+	margin-top: calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));
+	margin-bottom: calc(0.25rem * var(--tw-space-y-reverse));
+}
+.rounded-md {
+	border-radius: 0.375rem;
+}
+.bg-skin-fill {
 	--tw-bg-opacity: 1;
-	background-color: rgba(238, 238, 238, var(--tw-bg-opacity));
+	background-color: rgba(var(--color-fill));
 }
-.bg-\[\#ccc\] {
+.bg-skin-footer-fill {
 	--tw-bg-opacity: 1;
-	background-color: rgba(204, 204, 204, var(--tw-bg-opacity));
+	background-color: rgba(var(--color-fill-footer));
 }
-.p-\[3px\] {
-	padding: 3px;
+.bg-skin-header-fill {
+	--tw-bg-opacity: 1;
+	background-color: rgba(var(--color-fill-header));
 }
-.text-4xl {
-	font-size: 2.25rem;
-	line-height: 2.5rem;
+.bg-opacity-90 {
+	--tw-bg-opacity: 0.9;
+}
+.p-2 {
+	padding: 0.5rem;
+}
+.py-8 {
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+}
+.px-4 {
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+.px-2 {
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+}
+.pt-2 {
+	padding-top: 0.5rem;
+}
+.pb-3 {
+	padding-bottom: 0.75rem;
+}
+.text-center {
+	text-align: center;
 }
 .text-sm {
 	font-size: 0.875rem;
 	line-height: 1.25rem;
 }
-.font-bold {
-	font-weight: 700;
+.tracking-wide {
+	letter-spacing: 0.025em;
 }
-.text-\[\#333\] {
+.text-skin-base {
 	--tw-text-opacity: 1;
-	color: rgba(51, 51, 51, var(--tw-text-opacity));
+	color: rgba(var(--color-text-base));
+}
+.text-skin-secondary {
+	--tw-text-opacity: 1;
+	color: rgba(var(--color-text-secondary));
+}
+.transition {
+	transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+	transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+	transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-duration: 150ms;
+}
+.duration-700 {
+	transition-duration: 700ms;
+}
+.ease-in-out {
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.hover\:bg-skin-btn-hover:hover {
+	--tw-bg-opacity: 1;
+	background-color: rgba(var(--color-hover-button));
+}
+.hover\:text-skin-secondary:hover {
+	--tw-text-opacity: 1;
+	color: rgba(var(--color-text-secondary));
+}
+.focus\:outline-none:focus {
+	outline: 2px solid transparent;
+	outline-offset: 2px;
+}
+.focus\:ring-2:focus {
+	--tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+	--tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+	box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+}
+.focus\:ring-inset:focus {
+	--tw-ring-inset: inset;
+}
+.focus\:ring-white:focus {
+	--tw-ring-opacity: 1;
+	--tw-ring-color: rgba(255, 255, 255, var(--tw-ring-opacity));
+}
+@media (min-width: 640px) {
+
+	.sm\:mx-0 {
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+
+	.sm\:mr-2 {
+		margin-right: 0.5rem;
+	}
+
+	.sm\:ml-6 {
+		margin-left: 1.5rem;
+	}
+
+	.sm\:block {
+		display: block;
+	}
+
+	.sm\:hidden {
+		display: none;
+	}
+
+	.sm\:w-auto {
+		width: auto;
+	}
+
+	.sm\:items-stretch {
+		align-items: stretch;
+	}
+
+	.sm\:justify-start {
+		justify-content: flex-start;
+	}
+
+	.sm\:px-6 {
+		padding-left: 1.5rem;
+		padding-right: 1.5rem;
+	}
+}
+@media (min-width: 768px) {
+
+	.md\:flex-row {
+		flex-direction: row;
+	}
+
+	.md\:justify-center {
+		justify-content: center;
+	}
+}
+@media (min-width: 1024px) {
+
+	.lg\:px-8 {
+		padding-left: 2rem;
+		padding-right: 2rem;
+	}
 }
